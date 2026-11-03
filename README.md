@@ -8,6 +8,13 @@ A read-only natural-language assistant for public wallets on Pharos Pacific Main
 
 [Permanent public proof](./proof/README.md) and [successful live GitHub Actions run](https://github.com/trantanlong2411-droid/Portfolio-Assistant/actions/runs/41605763153) confirm both protocol contract reads at block 21999193, all wallet token reads, ten question types and eight automated tests.
 
+## User-exported proof from 3 November 2026
+
+- [Review the browser-exported snapshot and question-specific result](./proof/USER-PROOF.md).
+- [Inspect the original exported JSON](./proof/user-portfolio-export-2026-11-03.json), block 22004613, with actual zero holdings and source addresses.
+- The CI verification script independently replays the reported `biggest position` answer, checks the source contracts and pinned block, and exercises 10 other language patterns from the exported snapshot.
+- Do not claim this single JSON proves ten independent HTTP calls: it is one exported query, supplemented by earlier deployed GitHub Actions live tests.
+
 ## Coverage and on-chain sources
 
 | Source | Contract | Function |

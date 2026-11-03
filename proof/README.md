@@ -1,5 +1,7 @@
 # Portfolio Assistant — verified Pharos Mainnet proof
 
+[Additional original user-exported single-query evidence (block 22004613)](./USER-PROOF.md).
+
 Verified 03 November 2026 using a live public Cloudflare Worker on Pharos mainnet chain ID 1672.
 
 - [Open the website](https://portfolio-assistant.trantanlong2411.workers.dev/)

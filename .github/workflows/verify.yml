@@ -17,6 +17,8 @@ jobs:
       - run: npm install --no-audit --no-fund
       - name: Validate question understanding, source tracking and fail-closed outputs
         run: npm test
+      - name: Verify browser-exported portfolio evidence and replay ten answers
+        run: node scripts/verify-user-proof.mjs
       - name: Bundle Cloudflare Worker
         run: npm run build
   deployed-live-portfolio-proof:
