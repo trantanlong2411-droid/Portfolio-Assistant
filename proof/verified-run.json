@@ -1,0 +1,56 @@
+{
+  "schema": "pharos-portfolio-verified-summary-v1",
+  "dateUtc": "2026-11-03",
+  "sourceRun": "https://github.com/trantanlong2411-droid/Portfolio-Assistant/actions/runs/41605763153",
+  "network": "Pharos Pacific Mainnet",
+  "chainId": 1672,
+  "block": "21999193",
+  "wallet": "0x74B2c2E4E4B771F0C75dcE44f40787468E323f79",
+  "protocols": [
+    {
+      "protocol": "Morpho / RockawayX",
+      "address": "0x047cd0a91e9b92ed979189a6c8a120bf280f02e5",
+      "type": "vault shares",
+      "unit": "roxUSDC",
+      "balance": "0.0",
+      "available": true
+    },
+    {
+      "protocol": "Centrifuge",
+      "address": "0x8de0f3295b9e42b29e7617bada7c603277420451",
+      "type": "direct tokenized fund position token, not a separate vault deposit",
+      "unit": "deJTRSY",
+      "balance": "0.0",
+      "available": true
+    }
+  ],
+  "walletAssets": {
+    "PROS": "0.0",
+    "USDC": "0.0",
+    "WPROS": "0.0",
+    "WETH": "0.0"
+  },
+  "questionTypes": [
+    "overview",
+    "usdc",
+    "morpho",
+    "centrifuge",
+    "weth",
+    "wpros",
+    "pros",
+    "earnings",
+    "biggest",
+    "sources"
+  ],
+  "unitTestsPassed": 8,
+  "unitTestsFailed": 0,
+  "liveIntegration": "success",
+  "cloudflareBuild": "success",
+  "rawArtifact": "pharos-portfolio-assistant-live-proof",
+  "transactionBroadcast": false,
+  "caveats": [
+    "All six balance quantities are actually zero for this sample wallet.",
+    "Earnings, APR and largest USD position cannot be reliably calculated without price/history sources.",
+    "Direct Centrifuge token ownership does not prove a deposit at a vault."
+  ]
+}

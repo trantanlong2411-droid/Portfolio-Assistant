@@ -4,6 +4,10 @@
 
 A read-only natural-language assistant for public wallets on Pharos Pacific Mainnet (chain 1672). It reads wallet token balances and two independently identified protocol contracts in a **single pinned-block snapshot**, then answers questions with contract address, method and block for every verified number. Missing fields are shown as unavailable, never silently converted to zero.
 
+## Verified mainnet execution proof
+
+[Permanent public proof](./proof/README.md) and [successful live GitHub Actions run](https://github.com/trantanlong2411-droid/Portfolio-Assistant/actions/runs/41605763153) confirm both protocol contract reads at block 21999193, all wallet token reads, ten question types and eight automated tests.
+
 ## Coverage and on-chain sources
 
 | Source | Contract | Function |
