@@ -1,0 +1,40 @@
+name: Portfolio Assistant — two protocols, grounded answers, read-only
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit-tests-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - name: Validate question understanding, source tracking and fail-closed outputs
+        run: npm test
+      - name: Bundle Cloudflare Worker
+        run: npm run build
+  deployed-live-portfolio-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - name: Verify wallet + Morpho + Centrifuge on public live Worker and 10 questions
+        run: node scripts/smoke-deployed.mjs
+      - name: Retain actual Pharos mainnet source-by-source JSON
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pharos-portfolio-assistant-live-proof
+          path: proof/live-portfolio-evidence.json
+          retention-days: 30
+          if-no-files-found: error
